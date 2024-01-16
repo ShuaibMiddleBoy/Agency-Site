@@ -1,3 +1,23 @@
+ // ======================================== 
+// landing page active menu code
+ //======================================== 
+ let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
+
 
 // ======================================== 
  // active Menu Code 
@@ -146,21 +166,21 @@ const scrollTopFunc = () => {
 // Miantenance Code
  //========================================  
 
- var popup = document.getElementById('maintenance');
- var closeBtn = document.querySelector('.close-btn');
+//  var popup = document.getElementById('maintenance');
+//  var closeBtn = document.querySelector('.close-btn');
 
- // Function to show the popup
- function showPopup() {
-     popup.style.display = 'block';
- }
+//  // Function to show the popup
+//  function showPopup() {
+//      popup.style.display = 'block';
+//  }
 
- // Function to hide the popup
- function hidePopup() {
-     popup.style.display = 'none';
- }
+//  // Function to hide the popup
+//  function hidePopup() {
+//      popup.style.display = 'none';
+//  }
 
- // Show the popup every minute
- setInterval(showPopup, 20000); // 60000 milliseconds = 1 minute
+//  // Show the popup every minute
+//  setInterval(showPopup, 20000); // 60000 milliseconds = 1 minute
 
- // Close the popup on clicking the close button
- closeBtn.addEventListener('click', hidePopup);
+//  // Close the popup on clicking the close button
+//  closeBtn.addEventListener('click', hidePopup);
