@@ -125,7 +125,7 @@ countNum.forEach((curElem)=>{
         if(initialNum < targetNum){
             // curElem.innerText = initialNum + incrementNum;
             curElem.innerText = `${initialNum+1}+`;
-            setTimeout(updatedNum, 500)
+            setTimeout(updatedNum, 100)
         }
     }
     updatedNum()
