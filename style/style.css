@@ -1567,5 +1567,9 @@ footer.footer {
   font-size: 1rem;
   color: var(--white-color);
   padding-bottom: 10px;
+  text-align: center;
 }
 }
+
+
+

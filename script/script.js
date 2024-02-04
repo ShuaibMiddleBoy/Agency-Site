@@ -1,3 +1,28 @@
+   // ======================================== 
+// Scroll to Top 
+ //======================================== 
+
+ const scrollTop = document.querySelector('.scrollTop');
+ const homeWrapper = document.querySelector('.home-wrapper')
+
+const scrollTopFunc = () => {
+  homeWrapper.scrollIntoView({behavior:"smooth"});
+}
+ scrollTop.addEventListener('click', scrollTopFunc);
+
+    
+    
+    // ======================================== 
+// for copyright year 
+ //======================================== 
+ const copyright = document.querySelectorAll('.currentYear');
+copyright.forEach((ele)=>{
+  console.log(ele);
+  ele.innerHTML =  new Date().getFullYear();
+})
+console.log(copyright);
+
+ 
  // ======================================== 
 // landing page active menu code
  //======================================== 
@@ -140,24 +165,6 @@ countNum.forEach((curElem)=>{
 counterObserver.observe(workCounterSection);
 
 
-      // ======================================== 
-// for copyright year 
- //======================================== 
- document.getElementById('currentYear').innerHTML = new Date().getFullYear();
-
-
-
-   // ======================================== 
-// Scroll to Top 
- //======================================== 
-
- const scrollTop = document.querySelector('.scrollTop');
- const homeWrapper = document.querySelector('.home-wrapper')
-
-const scrollTopFunc = () => {
-  homeWrapper.scrollIntoView({behavior:"smooth"});
-}
- scrollTop.addEventListener('click', scrollTopFunc);
 
 
 
